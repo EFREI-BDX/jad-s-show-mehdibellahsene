@@ -1,0 +1,3 @@
+/Users/mrsmac/CLionProjects/mehdi_show/cmake-build-debug/CMakeFiles/mehdi_show.dir
+/Users/mrsmac/CLionProjects/mehdi_show/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mrsmac/CLionProjects/mehdi_show/cmake-build-debug/CMakeFiles/rebuild_cache.dir
