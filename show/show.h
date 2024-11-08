@@ -11,13 +11,13 @@ namespace show {
         std::string name;
         std::string description;
         ShowType showType;
-    public:
-        Show(const std::string& name, const std::string& description, ShowType showType)
-            : name(name), description(description), showType(showType) {}
 
-        std::string getName() const override { return name; }
-        std::string getDescription() const override { return description; }
-        ShowType getShowType() const override { return showType; }
+    public:
+        Show(const std::string& name, const std::string& description, ShowType showType);
+
+        std::string getName() const override;
+        std::string getDescription() const override;
+        ShowType getShowType() const override;
     };
 }
 

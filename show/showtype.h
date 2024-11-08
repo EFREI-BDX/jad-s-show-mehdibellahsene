@@ -3,7 +3,11 @@
 
 namespace show {
     enum class ShowType {
-        MOVIE, STREET_SHOW, THEATER, CONCERT, OTHER
+        MOVIE,
+        STREET_SHOW,
+        THEATER,
+        CONCERT,
+        OTHER
     };
 }
 

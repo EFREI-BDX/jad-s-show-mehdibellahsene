@@ -2,26 +2,30 @@
 #include "show/streetshow.h"
 #include "show/theatershow.h"
 #include "show/movieshow.h"
-#include <iostream>
+#include "customer/Spectator.h"
 #include <vector>
-
 using namespace show;
+using namespace customer;
 
-int main(int argc, char* argv[]) {
-    // Example usage
+int main() {
+    Spectator *jad = new Spectator("Jean-Aymeric", "DIET");
+    std::vector<IShow *> shows;
+
     ConcertShow concert("Les Guignols en tournée d'Europe", "La comédie à son paroxysme", "Guignol");
     StreetShow street("Les Arts martiaux au cœur de l'Europe", "Performance sportive", {"Bruce Lee", "Van Damme", "Jackie Chan"});
     TheaterShow theater("Le Comédie Show", "La désertification", "Jamel Debbouze", {"Amir", "Brahim", "Beyoncé"});
     MovieShow movie("Shrek", "Le meilleur film de tous les temps", "Jacques Tati", "2014", MovieType::COMEDY);
 
-    std::vector<IShow*> shows = {&concert, &street, &theater, &movie};
+    shows.push_back(&concert);
+    shows.push_back(&street);
+    shows.push_back(&theater);
+    shows.push_back(&movie);
 
-    for (const auto& show : shows) {
-        std::cout << "Name: " << show->getName() << std::endl;
-        std::cout << "Description: " << show->getDescription() << std::endl;
-        std::cout << "Type: " << static_cast<int>(show->getShowType()) << std::endl;
-        std::cout << std::endl;
+    for (IShow *show : shows) {
+        jad->watch(*show);
     }
+
+    delete jad;
 
     return 0;
 }

@@ -52,8 +52,23 @@ build cmake_object_order_depends_target_mehdi_show: phony || .
 build CMakeFiles/mehdi_show.dir/main.cpp.o: CXX_COMPILER__mehdi_show_unscanned_Debug /Users/mrsmac/CLionProjects/mehdi_show/main.cpp || cmake_object_order_depends_target_mehdi_show
   DEP_FILE = CMakeFiles/mehdi_show.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/mrsmac/CLionProjects/mehdi_show/show -I/Users/mrsmac/CLionProjects/mehdi_show/customer
   OBJECT_DIR = CMakeFiles/mehdi_show.dir
   OBJECT_FILE_DIR = CMakeFiles/mehdi_show.dir
+
+build CMakeFiles/mehdi_show.dir/show/show.cpp.o: CXX_COMPILER__mehdi_show_unscanned_Debug /Users/mrsmac/CLionProjects/mehdi_show/show/show.cpp || cmake_object_order_depends_target_mehdi_show
+  DEP_FILE = CMakeFiles/mehdi_show.dir/show/show.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/mrsmac/CLionProjects/mehdi_show/show -I/Users/mrsmac/CLionProjects/mehdi_show/customer
+  OBJECT_DIR = CMakeFiles/mehdi_show.dir
+  OBJECT_FILE_DIR = CMakeFiles/mehdi_show.dir/show
+
+build CMakeFiles/mehdi_show.dir/show/movietype.cpp.o: CXX_COMPILER__mehdi_show_unscanned_Debug /Users/mrsmac/CLionProjects/mehdi_show/show/movietype.cpp || cmake_object_order_depends_target_mehdi_show
+  DEP_FILE = CMakeFiles/mehdi_show.dir/show/movietype.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/mrsmac/CLionProjects/mehdi_show/show -I/Users/mrsmac/CLionProjects/mehdi_show/customer
+  OBJECT_DIR = CMakeFiles/mehdi_show.dir
+  OBJECT_FILE_DIR = CMakeFiles/mehdi_show.dir/show
 
 
 # =============================================================================
@@ -63,7 +78,7 @@ build CMakeFiles/mehdi_show.dir/main.cpp.o: CXX_COMPILER__mehdi_show_unscanned_D
 #############################################
 # Link the executable mehdi_show
 
-build mehdi_show: CXX_EXECUTABLE_LINKER__mehdi_show_Debug CMakeFiles/mehdi_show.dir/main.cpp.o
+build mehdi_show: CXX_EXECUTABLE_LINKER__mehdi_show_Debug CMakeFiles/mehdi_show.dir/main.cpp.o CMakeFiles/mehdi_show.dir/show/show.cpp.o CMakeFiles/mehdi_show.dir/show/movietype.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   OBJECT_DIR = CMakeFiles/mehdi_show.dir
   POST_BUILD = :

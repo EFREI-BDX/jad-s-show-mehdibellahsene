@@ -4,10 +4,10 @@
 #include "show.h"
 #include <string>
 
+#include "movietype.h"
+
 namespace show {
-    enum class MovieType {
-        ACTION, ADVENTURE, COMEDY, DRAMA, ROMANCE, SCIENCE_FICTION, THRILLER
-    };
+
 
     class MovieShow : public Show {
     private:
